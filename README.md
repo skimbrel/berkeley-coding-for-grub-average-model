@@ -7,7 +7,7 @@ a new review, it takes the average of the average rating for the business and us
 ## Usage
 
 python average_model.py training_data.json testing_data.json > hypothesis.json
-curl -Fhypothesis=@hypothesis.json http://floating-spring-4122.herokuapp.com/rmse
+curl -Fhypothesis=@hypothesis.json http://yelp-csua-coding.herokuapp.com/rmse
 
 ## Resources
 
