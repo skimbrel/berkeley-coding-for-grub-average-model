@@ -15,7 +15,7 @@ http://www.yelp.com/academic_dataset
 
 test_reviews.json available to Berkeley students during the competition
 
-To test results http://floating-spring-4122.herokuapp.com/rmse
+To test results http://yelp-csua-coding.herokuapp.com/rmse
 
 ## License
 
