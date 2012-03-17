@@ -19,6 +19,8 @@ def generate_model(training_data):
     business_averages = {}
 
     for line in training_data:
+        # Each line of the input data is a JSON dictionary object containing a record.
+        # Use simplejson's loads() function to parse this into a native Python dictionary.
         parsed_data = simplejson.loads(line)
 
         if parsed_data.get('review_id', None) is not None:
@@ -48,6 +50,8 @@ def predict_reviews(review_data, user_averages, business_averages):
     """
 
     for raw_review in review_data:
+        # Each line of the testing data is a JSON dictionary object containing a review record.
+        # Use simplejson's loads() function to parse this into a native Python dictionary.
         review = simplejson.loads(raw_review)
 
         review_id = review.get('review_id', None)
@@ -84,6 +88,8 @@ def predict_reviews(review_data, user_averages, business_averages):
             'stars': guess,
         }
 
+        # Use simplejson's dumps() function to encode our output dict as a JSON
+        # dictionary, and print the result to stdout.
         print(simplejson.dumps(output))
 
 def train_and_predict(training_filename, test_filename):
